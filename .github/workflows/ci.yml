@@ -25,3 +25,6 @@ jobs:
 
       - name: Build con Maven
         run: cd backend && mvn -B clean compile
+
+      - name: Ejecutar pruebas unitarias
+        run: cd backend && mvn test
