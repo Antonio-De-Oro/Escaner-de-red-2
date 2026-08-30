@@ -29,4 +29,9 @@ public class ScanController {
     public ResponseEntity<Map<String, String>> getStatus() {
         return ResponseEntity.ok(Map.of("status", "Backend running"));
     }
+
+    @GetMapping("/estado")
+    public String getEstado() {
+        return "Estado OK";
+    }
 }
