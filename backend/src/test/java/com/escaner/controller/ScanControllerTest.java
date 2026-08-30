@@ -22,7 +22,8 @@ class ScanControllerTest {
 
         mockMvc.perform(post("/api/scan"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.status").value("Scan command sent to Arduino"));
+                // .andExpect(jsonPath("$.status").value("Scan command sent to Arduino"));
+                .andExpect(jsonPath("$.status").value("STATUS INCORRECTO"));
 
         verify(arduinoService).sendScanCommand();
     }
